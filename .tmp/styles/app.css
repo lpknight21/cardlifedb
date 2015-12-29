@@ -26,6 +26,11 @@ body {
     margin-bottom: 25px;
 }
 
+.img-component {
+  height: 200px;
+  width: 200px;
+}
+
 .img-center {
 	margin: 0 auto;
 }

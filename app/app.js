@@ -93,8 +93,16 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
         templateUrl: 'pages/thumbnail-gallery.html'
       })
       .state('welcome', {
-        url: '/',
+        url: '/pages/welcome',
         templateUrl: 'pages/welcome.html'
+      })
+      .state('getting-started', {
+        url: '/getting-started',
+        templateUrl: 'static/getting-started.html'
+      })
+      .state('home', {
+        url: '/',
+        templateUrl: 'static/home.html'
       });
     // $stateProvider
     //   .state('home', {
