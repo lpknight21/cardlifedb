@@ -28,7 +28,9 @@ Run grunt serve to confirm that everything is wired up...
 
 When using grunt serve livereload will be running in the background
 
-As you code and save changes locally, your browser will automagically be updated without needing to hit F5! How refreshing! (no pun intended)
+As you code and save changes locally, your browser will automagically be updated without needing to hit F5!
+
+How refreshing! (no pun intended)
 
 EXAMPLE
 
