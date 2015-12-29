@@ -13,13 +13,16 @@ We are in the process of getting things fired up.
 ### Download git project
 
 Run npm install to install all backend node package dependencies...
-$ npm install
+
+  $ npm install
 
 Run bower install for all frontend bower package dependencies...
-$ bower install
+
+  $ bower install
 
 Run grunt serve to confirm that everything is wired up...
-$ grunt serve
+
+  $ grunt serve
 
 ### Coding and Designing Using Livereload
 
@@ -30,6 +33,6 @@ When using grunt serve livereload will be running in the background
 
 As simple as build and deploy... literally
 
-$ grunt build
+  $ grunt build
 
-$ firebase deploy
+  $ firebase deploy
