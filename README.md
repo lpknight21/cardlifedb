@@ -14,25 +14,34 @@ We are in the process of getting things fired up.
 
 Run npm install to install all backend node package dependencies...
 
-  $ npm install
+    $ npm install
 
 Run bower install for all frontend bower package dependencies...
 
-  $ bower install
+    $ bower install
 
 Run grunt serve to confirm that everything is wired up...
 
-  $ grunt serve
+    $ grunt serve
 
 ### Coding and Designing Using Livereload
 
 When using grunt serve livereload will be running in the background
 
+As you code and save changes locally, your browser will automagically be updated without needing to hit F5! How refreshing! (no pun intended)
+
+EXAMPLE
+
+    Running "connect:livereload" (connect) task
+    Started connect web server on http://localhost:4000
+
+    Running "watch" task
+    Waiting...
 
 ### Build & Deployment Process
 
 As simple as build and deploy... literally
 
-  $ grunt build
+    $ grunt build
 
-  $ firebase deploy
+    $ firebase deploy
