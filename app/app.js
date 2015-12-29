@@ -96,9 +96,9 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
         url: '/pages/welcome',
         templateUrl: 'pages/welcome.html'
       })
-      .state('getting-started', {
-        url: '/getting-started',
-        templateUrl: 'static/getting-started.html'
+      .state('get-started', {
+        url: '/get-started',
+        templateUrl: 'static/get-started.html'
       })
       .state('home', {
         url: '/',
