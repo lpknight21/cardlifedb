@@ -10,6 +10,7 @@
   "dependencies": {
     "angular": "^1.4.3",
     "angularfire": "~1.1.2",
+    "angular-bootstrap": "~0.14.3",
     "angular-route": "~1.4.3",
     "angular-ui-router": "~0.2.14",
     "angular-md5": "~0.1.7",
