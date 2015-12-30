@@ -48,6 +48,50 @@ var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', '
           }
         }
       })
+      // BLOG
+      .state('blog-posts', {
+        url: '/blog/posts',
+        controller: 'PostsCtrl as postsCtrl',
+        templateUrl: 'blog/index.html',
+        resolve: {
+          alarms: function (Posts){
+             return Posts();
+           },
+          auth: function($state, Users, Auth){
+            return Auth.$requireAuth().catch(function(){
+              $state.go('home');
+            });
+          }
+        }
+      })
+      .state('blog-post-create', {
+        url: '/blog/posts/create',
+        templateUrl: 'blog/create.html',
+        controller: 'PostsCtrl as postsCtrl',
+        resolve: {
+          auth: function($state, Users, Auth){
+            return Auth.$requireAuth().catch(function(){
+              $state.go('home');
+            });
+          }
+        }
+      })
+      .state('blog-post-view', {
+        url: '/blog/posts/view/{postId}',
+        templateUrl: 'blog/view.html',
+        controller: 'PostsCtrl as postsCtrl'
+      })
+      .state('blog-post-preview', {
+        url: '/blog/posts/preview/{postId}',
+        templateUrl: 'blog/preview.html',
+        controller: 'PostsCtrl as postsCtrl'
+      })
+      .state('posts/edit', {
+        url: '/blog/posts/edit/{postId}',
+        templateUrl: 'blog/edit.html',
+        controller: 'PostsCtrl as postsCtrl'
+      })
+      // Pages Content
       .state('pages-about', {
         url: '/pages/about',
         templateUrl: 'pages/about.html'

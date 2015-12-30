@@ -1,0 +1,45 @@
+
+<form class="form-horizontal well" ng-submit="update()" ng-init="getPost()">
+  <fieldset>
+    <legend>Edit Post</legend>
+        <br>
+        <hr>
+    <div class="form-group">
+      <label for="inputId" class="col-lg-2 control-label">Post Id</label>
+      <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputId" placeholder="id" ng-model="post.$id" readonly>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputStatus" class="col-lg-2 control-label">Post Status</label>
+      <div class="col-lg-3">
+        <select id="inputStatus" class="form-control" placeholder="status" ng-model="post.status">
+          <option>Draft</option>
+          <option>Published</option>
+          <option>Archived</option>
+        </select>
+      </div>
+    </div>
+<hr>
+    <div class="form-group">
+      <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+      <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputTitle" placeholder="title" ng-model="post.title" >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputBody" class="col-lg-2 control-label">Body</label>
+      <div class="col-lg-10">
+        <div text-angular ng-model="post.body" ></div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <a href="#/blog/posts" class="btn btn-xs btn-default">Cancel</a>
+        <button type="submit" class="btn btn-xs btn-primary">Update Post</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
