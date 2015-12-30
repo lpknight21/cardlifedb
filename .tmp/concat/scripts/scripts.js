@@ -227,12 +227,12 @@ app.factory('Users', ["$firebaseArray", "$firebaseObject", "FIREBASE_URL", funct
   console.log('--> starterlog/app/users/users.service.js loaded');
 
 'use strict';
-app.controller('ProfileCtrl', ["$state", "Auth", "md5", "auth", "profile", function($state, Auth, md5, auth, profile){
+app.controller('ProfileCtrl', ["$state", "Auth", "auth", "profile", function($state, Auth, auth, profile){
     var profileCtrl = this;
     profileCtrl.profile = profile;
     profileCtrl.updateProfile = function(){
       profileCtrl.profile.email = auth.password.email;
-      profileCtrl.profile.emailHash = md5.createHash(auth.password.email);
+      //profileCtrl.profile.emailHash = md5.createHash(auth.password.email);
       profileCtrl.profile.$save().then(function(){
         $state.go('profile');
       });

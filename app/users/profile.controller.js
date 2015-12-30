@@ -1,10 +1,10 @@
 'use strict';
-app.controller('ProfileCtrl', function($state, Auth, md5, auth, profile){
+app.controller('ProfileCtrl', function($state, Auth, auth, profile){
     var profileCtrl = this;
     profileCtrl.profile = profile;
     profileCtrl.updateProfile = function(){
       profileCtrl.profile.email = auth.password.email;
-      profileCtrl.profile.emailHash = md5.createHash(auth.password.email);
+      //profileCtrl.profile.emailHash = md5.createHash(auth.password.email);
       profileCtrl.profile.$save().then(function(){
         $state.go('profile');
       });
