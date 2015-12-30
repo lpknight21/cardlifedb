@@ -57,4 +57,19 @@ As simple as build and deploy... literally
 
     $ grunt build
 
-    $ firebase deploy
+    $ grunt deploy
+
+
+*grunt build*
+
+- Clean out dist directory
+- Wire bower component dependencies into index.html
+- Minify, Concat, and Prefix application css and js dependencies
+- Copy dependencies into dist directory
+
+
+*grunt deploy*
+
+- Run build task
+- Run firebase deploy
+- Run git add, commit, push for Latest Build
