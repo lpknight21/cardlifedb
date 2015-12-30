@@ -52,47 +52,55 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
         url: '/pages/about',
         templateUrl: 'pages/about.html'
       })
-      .state('blog-home', {
+      .state('pages-blog-home', {
         url: '/pages/blog-home',
         templateUrl: 'pages/blog-home.html'
       })
-      .state('blog-post', {
+      .state('pages-blog-post', {
         url: '/pages/blog-post',
         templateUrl: 'pages/blog-post.html'
       })
-      .state('1-column-portfolio', {
+      .state('pages-1-column-portfolio', {
         url: '/pages/1-column-portfolio',
         templateUrl: 'pages/1-column-portfolio.html'
       })
-      .state('2-column-portfolio', {
+      .state('pages-2-column-portfolio', {
         url: '/pages/2-column-portfolio',
         templateUrl: 'pages/2-column-portfolio.html'
       })
-      .state('3-column-portfolio', {
+      .state('pages-3-column-portfolio', {
         url: '/pages/3-column-portfolio',
         templateUrl: 'pages/3-column-portfolio.html'
       })
-      .state('4-column-portfolio', {
+      .state('pages-4-column-portfolio', {
         url: '/pages/4-column-portfolio',
         templateUrl: 'pages/4-column-portfolio.html'
       })
-      .state('landing', {
+      .state('pages-landing', {
         url: '/pages/landing',
         templateUrl: 'pages/landing.html'
       })
-      .state('portfolio-item', {
+      .state('pages-signin', {
+        url: '/pages/signin',
+        templateUrl: 'pages/signin.html'
+      })
+      .state('pages-signup', {
+        url: '/pages/signup',
+        templateUrl: 'pages/signup.html'
+      })
+      .state('pages-portfolio-item', {
         url: '/pages/portfolio-item',
         templateUrl: 'pages/portfolio-item.html'
       })
-      .state('product', {
+      .state('pages-product', {
         url: '/pages/product',
         templateUrl: 'pages/product.html'
       })
-      .state('thumbnail-gallery', {
+      .state('pages-thumbnail-gallery', {
         url: '/pages/thumbnail-gallery',
         templateUrl: 'pages/thumbnail-gallery.html'
       })
-      .state('welcome', {
+      .state('pages-welcome', {
         url: '/pages/welcome',
         templateUrl: 'pages/welcome.html'
       })
