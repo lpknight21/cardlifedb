@@ -4,12 +4,13 @@
 
 <h4>Overview</h4>
 <p>
-  The <b>controller</b> provides model data to the view, and interprets user actions such as button clicks.
+  The <b>controller</b> provides <b>model</b> data to the <b>view</b>, and interprets user actions such as button clicks.
   <br><br>
-  The controller depends on the view and the model.
+  The <b>controller</b> depends on the <b>view</b> and the <b>model</b>.
   <br><br>
-  Routes are defined in our main app.js using stateProvider to map
+  The routes are defined and configured in our main app.js using stateProvider to map application state to our interface.
   <br>
+  Example:<br>
   <ul>
     <li>state('models',</li>
     <li>url: '/models'</li>
@@ -17,13 +18,26 @@
     <li>templateUrl: 'models/index.html'</li>
   </ul>
   <br>
-
-  The <b>model</b> represents the data, and does nothing else.
-Here you can see we are assigning models to $scope using our Models Factory <pre>$firebaseArray</pre>
 </p>
-
-
-<h4>Code</h4>
+<p>
+In the code sample below, you can see we are assigning Models to $scope using our Models Factory Service which returns a $firebaseArray<br>
+<i><b>Note:</b> the Models Factory Service is defined as a module dependency in our controller.</i>
+</p>
+<p>
+From there we implement our basic CRUD (create, read, update, delete) functionality using $firebaseObject to map to a specific child reference.<br>
+<i><b>Note:</b> the firebaseObject and firebaseArray modules are defined as dependencies in our controller.</i><br>
+<i><b>Note:</b> the getModel function that we define here.  We later use it in the /model/view.html and /model/edit.html via ng-init to retrieve a specific model (aka firebaseObject)</i><br>
+</p>
+<p>
+<br>
+Additional Comments<br>
+<i><b>Note:</b> the $state and $stateParams module dependencies which are defined in our controller so that we can use the ui-router to manage our application state</i><br>
+<i><b>Note:</b> the $FIREBASE_URL constant which is defined in our app.js</i><br>
+<i><b>Note:</b> the $ngTableParams and $filter module dependencies which are defined in our controller so that we can configure datatables in our views via ngTable</i><br>
+</p>
+<br><br>
+<hr>
+<h4>Code Sample</h4>
 <pre>
 'use strict';
 

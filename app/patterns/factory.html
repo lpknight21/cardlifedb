@@ -2,6 +2,16 @@
   Factory
 </p>
 
+<h4>Overview</h4>
+<p>
+  The <b>factory</b> service returns a $firebaseArray which is synchronized to the <b>models</b> data.
+  <br><br>
+  The <b>controller</b> depends on the <b>factory</b> service to bind model data to the <b>views</b> via $firebaseArray and $firebaseObject.
+  <br><br>
+  <i><b>Note:</b> the factory service is defined before the controller in app/index.html so that the factory module dependency is loaded before the controller.</i>
+<br><br>
+<hr>
+<h4>Code Sample</h4>
 <pre>
 'use strict';
 
