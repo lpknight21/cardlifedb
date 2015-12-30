@@ -1,0 +1,21 @@
+<p class="lead">
+  Factory
+</p>
+
+<pre>
+'use strict';
+
+app.factory("Models", function ModelFactory(FIREBASE_URL, $firebaseArray) {
+    return function(){
+
+    // snapshot of our data
+    var ref = new Firebase(FIREBASE_URL + 'models');
+
+    // returning synchronized array
+    return $firebaseArray(ref);
+  }
+});
+
+// log output to console for easier debugging
+console.log('--> starterlog/app/models/models.service.js loaded');
+</pre>

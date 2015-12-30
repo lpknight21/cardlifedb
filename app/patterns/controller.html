@@ -1,0 +1,114 @@
+<p class="lead">
+  Controller
+</p>
+
+<h4>Overview</h4>
+<p>
+  The <b>controller</b> provides model data to the view, and interprets user actions such as button clicks.
+  <br><br>
+  The controller depends on the view and the model.
+  <br><br>
+  Routes are defined in our main app.js using stateProvider to map
+  <br>
+  <ul>
+    <li>state('models',</li>
+    <li>url: '/models'</li>
+    <li>controller: 'ModelCtrl as modelCtrl',
+    <li>templateUrl: 'models/index.html'</li>
+  </ul>
+  <br>
+
+  The <b>model</b> represents the data, and does nothing else.
+Here you can see we are assigning models to $scope using our Models Factory <pre>$firebaseArray</pre>
+</p>
+
+
+<h4>Code</h4>
+<pre>
+'use strict';
+
+app.controller("ModelsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObject, $firebaseArray, $stateParams, ngTableParams, $filter, Models) {
+
+    $scope.models = Models();
+
+    // add a new model
+    $scope.create = function(model) {
+      $scope.models.$add(model).then(function() {
+        console.log('model Created');
+        //$location.path('/models');
+        $state.go('models');
+
+      }).catch(function(error) {
+        console.log(error);
+      });
+    };
+
+    // remove a model
+    $scope.delete = function(model) {
+        $scope.models.$remove(model).then(function(){
+            console.log('model Deleted');
+            //$scope.tableModels.reload();
+        }).catch(function(error){
+            console.log(error);
+        });
+    };
+
+    // getModel on init for /models/edit/:id route
+    $scope.getModel = function() {
+      var ref = new Firebase(FIREBASE_URL + 'models');
+      $scope.model = $firebaseObject(ref.child($stateParams.modelId));
+    };
+
+    // update a model and save it
+    $scope.update = function() {
+
+      // save firebaseObject
+      $scope.model.$save().then(function(){
+        console.log('model Updated');
+
+        // redirect to /model path after update
+        $state.go('models');
+
+      }).catch(function(error){
+
+        console.log(error);
+
+      });
+    };
+
+    // Since the data is asynchronous we'll need to use the $loaded promise.
+    // Once data is available we'll set the data variable and init the ngTable
+    $scope.models.$loaded().then(function(alarms) {
+      console.log(models.length); // data is loaded here
+      var data = models;
+
+      $scope.tableModels = new ngTableParams({
+            page: 1,            // show first page
+            count: 10,          // count per page
+            sorting: { title: 'asc' }    // initial sorting
+        }, {
+            total: data.length, // length of data
+            getData: function($defer, params) {
+                // use build-in angular filter
+                var orderedData = params.sorting() ? $filter('filter')(data, params.filter()) : data;
+                $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+            }
+        });
+
+    });
+
+    // Listening for list updates to Models to update Table
+    var ref = new Firebase(FIREBASE_URL + 'models');
+    var list = $firebaseArray(ref);
+    list.$watch(function(event) {
+      console.log(event);
+      $scope.models.$loaded().then(function(){
+        $scope.tableModels.reload();
+      });
+    });
+
+});
+
+console.log('--> starterlog/app/models/models.controller.js loaded');
+
+</pre>

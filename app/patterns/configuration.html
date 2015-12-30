@@ -1,0 +1,118 @@
+<p class="lead">
+  Configuration
+</p>
+
+<p>Here we provide an overview of how the starterlog application is organized and configured.</p>
+
+<ul>
+  <li>Application Structure - Overview</li>
+  <li>Application Structure - Detail</li>
+  <li>Application Configuration</li>
+</ul>
+<br><br>
+
+<hr>
+<h4>Application Structure | Overview</h4>
+<p>Here is the high level directory structure for a starterlog application.</p><br>
+
+<pre>
+  /
+    .git/
+    .tmp/
+    app/
+        auth/
+        images/
+        scripts/
+        static/
+        styles/
+        users/
+        app.js
+        index.html
+    bower_components/
+    dist/
+    node_modules/
+    .gitignore
+    bower.json
+    firebase.json
+    Gruntfile.js
+    LICENSE
+    package.json
+    README.md
+</pre>
+<br><br>
+
+<hr>
+<h4>Application Structure | Detail</h4>
+<p>
+  Our application directory structure is very simple and straight-forward.  Here is a quick overview that provides some additional detail.
+</p><br>
+<p>
+  <b>.git/</b><br>
+  <i># Git Project Directory</i><br>
+  <i># The <b>.git/</b> folder contain all the information that is necessary for managing our project in <b>git</b> version control.</i>
+</p><br>
+
+<p>
+  <b>.tmp/</b><br>
+  <i># Temporary Staging Directory</i><br>
+  <i># The <b>.tmp/</b> folder is the temporary staging directory where our <b>grunt build</b> process prepares and packages our application as defined in Gruntfile.js</i>
+</p><br>
+
+<p>
+  <b>app/</b><br>
+  <i># Source Code Directory</i><br>
+  <i># The <b>app/</b> folder is the core application directory that contains all our handcrafted source code.</i>
+</p><br>
+
+<p>
+  <b>bower_components/</b><br>
+  <i># Web Packages Directory</i><br>
+  <i># The <b>bower_components/</b> folder is the directory where bower web packages are installed as defined in bower.json via <b>bower install</b>.</i>
+</p><br>
+
+<p>
+  <b>dist/</b><br>
+  <i>#Deployment Directory</i><br>
+  <i># The <b>dist/</b> folder is the distribution directory where our <b>grunt build</b> process places our application for deployment as defined in Gruntfile.js</i>
+</p><br>
+
+<p>
+  <b>node_modules/</b><br>
+  <i># Node Packages Directory</i><br>
+  <i># The <b>node_modules/</b> folder is where npm packages are installed as defined in package.json via <b>npm install</b></i>
+</p><br>
+
+<p>
+  <b>.gitignore</b><br>
+  <i># .gitignore File</i><br>
+  <i># The <b>.gitignore</b> file specifies intentionally untracked files that Git should ignore during git commits. Files already tracked by Git are not affected.</i>
+</p><br>
+
+<p>
+  <b>bower.json</b><br>
+  <i># bower.json File</i><br>
+  <i># The <b>bower.json</b> file defines the web package dependencies that are required by our application and are installed in the bower_components directory via <b>bower install</b>.</i>
+</p><br>
+
+<p>
+  <b>firebase.json</b><br>
+  <i># firebase.json File</i><br>
+  <i># The <b>firebase.json</b> file is used by the firebase-tools cli to configure which files are published upon deployment via <b>firebase deploy</b>.</i>
+</p><br>
+
+<p>
+  <b>Gruntfile.js</b><br>
+  <i># Gruntfile.js File</i><br>
+  <i># The <b>Gruntfile.js</b> is used to define and configure our core grunt build and deployment tasks including (<b>grunt serve</b> and <b>grunt build</b>).</i>
+  <i># Development Tasks such as Serve, Watch, and Livereload are defined here.</i>
+  <i># Build Tasks such as Minify, Concat, Prefix, and etc are defined here.</i>
+</p><br>
+
+<p>
+  <b>package.json</b><br>
+  <i># package.json File</i><br>
+  <i># The <b>package.json</b> file defines the application build and deployment dependencies that are required by our application and are installed in the node_modules directory via <b>npm install</b>.</i>
+</p><br>
+
+<hr>
+<h4>Application Configuration | Overview</h4>
