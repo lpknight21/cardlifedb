@@ -391,7 +391,25 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    // Execute Firebase Deploy
+
+    exec: {
+      deploy: {
+        cmd: 'firebase deploy'
+      },
+      git_add: {
+        cmd: 'git add .'
+      },
+      git_commit: {
+        cmd: 'git commit -m "Latest Build and Firebase Deployment"'
+      },
+      git_push: {
+        cmd: 'git push'
+      }
     }
+
   });
 
 
@@ -439,6 +457,14 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'exec:deploy',
+    'exec:git_add',
+    'exec:git_commit',
+    "exec:git_push"
   ]);
 
   grunt.registerTask('default', [
