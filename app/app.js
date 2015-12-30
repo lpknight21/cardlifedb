@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap','ui.router', 'ngTable', 'textAngular'])
+var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', 'ngTable', 'textAngular'])
   .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
       .state('login', {
@@ -10,7 +10,7 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
         resolve: {
           requireNoAuth: function($state, Auth){
             return Auth.$requireAuth().then(function(auth){
-              $state.go('welcome');
+              $state.go('home');
             }, function(error){
               return;
             });
@@ -24,7 +24,7 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
         resolve: {
           requireNoAuth: function($state, Auth){
             return Auth.$requireAuth().then(function(auth){
-              $state.go('welcome');
+              $state.go('home');
             }, function(error){
               return;
             });
@@ -38,7 +38,7 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
         resolve: {
           auth: function($state, Users, Auth){
             return Auth.$requireAuth().catch(function(){
-              $state.go('welcome');
+              $state.go('home');
             });
           },
           profile: function(Users, Auth){
