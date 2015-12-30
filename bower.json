@@ -13,7 +13,6 @@
     "angular-bootstrap": "~0.14.3",
     "angular-route": "~1.4.3",
     "angular-ui-router": "~0.2.14",
-    "angular-md5": "~0.1.7",
     "bootstrap": "^3.3.5",
     "firebase": "~2.2.7",
     "fontawesome": "~4.3.0",
