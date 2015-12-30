@@ -48,7 +48,7 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
           }]
         }
       })
-      .state('about', {
+      .state('pages-about', {
         url: '/pages/about',
         templateUrl: 'pages/about.html'
       })
@@ -59,6 +59,18 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
       .state('pages-blog-post', {
         url: '/pages/blog-post',
         templateUrl: 'pages/blog-post.html'
+      })
+      .state('pages-twitter-bootstrap-components', {
+        url: '/pages/twitter-bootstrap-components',
+        templateUrl: 'pages/twitter-bootstrap-components.html'
+      })
+      .state('pages-angular-bootstrap-directives', {
+        url: '/pages/angular-bootstrap-directives',
+        templateUrl: 'pages/angular-bootstrap-directives.html'
+      })
+      .state('pages-cover', {
+        url: '/pages/cover',
+        templateUrl: 'pages/cover.html'
       })
       .state('pages-1-column-portfolio', {
         url: '/pages/1-column-portfolio',
@@ -103,6 +115,18 @@ var app = angular.module('starterlog', ['firebase','angular-md5','ui.bootstrap',
       .state('pages-welcome', {
         url: '/pages/welcome',
         templateUrl: 'pages/welcome.html'
+      })
+      .state('patterns-configuration', {
+        url: '/patterns/configuration',
+        templateUrl: 'patterns/configuration.html'
+      })
+      .state('patterns-contoller', {
+        url: '/patterns/controller',
+        templateUrl: 'patterns/controller.html'
+      })
+      .state('patterns-factory', {
+        url: '/patterns/factory',
+        templateUrl: 'patterns/factory.html'
       })
       .state('get-started', {
         url: '/get-started',
