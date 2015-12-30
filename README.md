@@ -70,6 +70,8 @@ As simple as build and deploy... literally
 
 *grunt deploy*
 
-- Run build task
-- Run firebase deploy
-- Run git add, commit, push for Latest Build
+- Run grunt build task
+- Execute firebase deploy from command line
+- Execute git add from command line
+- Execute git commit -m "Latest Build and Firebase Deployment" from command line
+- Execute git push
