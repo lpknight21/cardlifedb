@@ -28,6 +28,18 @@
       </div>
     </div>
     <div class="form-group">
+      <label for="inputAuthor" class="col-lg-2 control-label">Author</label>
+      <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputAuthor" placeholder="author" ng-model="post.author" readonly>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCreatedAt" class="col-lg-2 control-label">Created At</label>
+      <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputCreatedAt" placeholder="createdAt" ng-model="post.createdAt" readonly>
+      </div>
+    </div>
+    <div class="form-group">
       <label for="inputBody" class="col-lg-2 control-label">Body</label>
       <div class="col-lg-10">
         <div ta-bind ng-model="post.body" ></div>

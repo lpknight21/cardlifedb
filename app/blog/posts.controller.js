@@ -12,6 +12,7 @@ app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObje
 
     // CREATE - ADD A NEW POST TO FIREBASE
     $scope.create = function(post) {
+      post.createdAt = new Date().toString();
       $scope.posts.$add(post).then(function() {
         console.log('Blog Post Created');
 
