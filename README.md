@@ -17,7 +17,8 @@ StarterLog is a seed project that serves teams who are in the process of getting
 - Node JS
 - NPM
 - Bower JS
-- Grunt JS  
+- Grunt JS
+- Travis CI  
 
 ## Setup
 
