@@ -8,5 +8,4 @@ before_script:
   - npm install
   - bower install
   - grunt build
-  - firebase login --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
-  - firebase deploy
+  - firebase deploy --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
