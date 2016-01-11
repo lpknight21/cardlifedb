@@ -8,4 +8,4 @@ before_script:
   - npm install
   - bower install
   - grunt build
-  - firebase -- non-interactive deploy --token "${FIREBASE_TOKEN}"
+  - firebase deploy --token $FIREBASE_TOKEN
