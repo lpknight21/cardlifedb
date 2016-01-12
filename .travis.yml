@@ -12,3 +12,4 @@ deploy:
   provider: firebase
   token: ${FIREBASE_TOKEN}
   project: "starterlog-org"
+  public: "dist"
