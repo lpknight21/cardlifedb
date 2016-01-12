@@ -8,4 +8,7 @@ before_script:
   - npm install
   - bower install
   - grunt build
-  - firebase deploy --token ${FIREBASE_TOKEN}
+deploy:
+  provider: firebase
+  token: ${FIREBASE_TOKEN}
+  project: "starterlog-org"
