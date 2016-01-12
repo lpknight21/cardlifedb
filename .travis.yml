@@ -2,14 +2,12 @@ language: node_js
 node_js:
   - "4.0.0"
 before_script:
+  - gem install dpl
   - npm install grunt-cli -g
   - npm install firebase-tools -g
   - npm install bower -g
   - npm install
   - bower install
   - grunt build
-deploy:
-  provider: firebase
-  token: ${FIREBASE_TOKEN}
-  project: "starterlog-org"
-  public: "dist"
+after_script:
+  - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-org
