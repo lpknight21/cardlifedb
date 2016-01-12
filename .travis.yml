@@ -11,3 +11,4 @@ before_script:
   - grunt build
 after_script:
   - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-org --public=dist
+  - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-demo --public=dist
