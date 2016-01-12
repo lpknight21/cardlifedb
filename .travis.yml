@@ -8,5 +8,4 @@ before_script:
   - npm install
   - bower install
   - grunt build
-  - echo ${FIREBASE_TOKEN}
   - firebase deploy --token ${FIREBASE_TOKEN}
