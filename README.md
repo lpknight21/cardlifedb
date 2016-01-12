@@ -15,10 +15,10 @@ StarterLog is a seed project that serves teams who are in the process of getting
 - Bootstrap
 - Font Awesome
 - Node JS
-- NPM
-- Bower JS
-- Grunt JS
-- Travis CI  
+- NPM       (Backend Dependencies)
+- Bower JS  (Frontend Dependencies)
+- Grunt JS  (Task Runner)
+- Travis CI (Build Server)  
 
 ## Setup
 
