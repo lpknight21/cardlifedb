@@ -1,0 +1,17 @@
+<p class="lead"> Factory </p> <h4>Overview</h4> <p> The <b>factory</b> service returns a $firebaseArray which is synchronized to the <b>models</b> data. <br><br> The <b>controller</b> depends on the <b>factory</b> service to bind model data to the <b>views</b> via $firebaseArray and $firebaseObject. <br><br> <i><b>Note:</b> the factory service is defined before the controller in app/index.html so that the factory module dependency is loaded before the controller.</i> <br><br> <hr> <h4>Code Sample</h4> <pre>
+'use strict';
+
+app.factory("Models", function ModelFactory(FIREBASE_URL, $firebaseArray) {
+    return function(){
+
+    // snapshot of our data
+    var ref = new Firebase(FIREBASE_URL + 'models');
+
+    // returning synchronized array
+    return $firebaseArray(ref);
+  }
+});
+
+// log output to console for easier debugging
+console.log('--> starterlog/app/models/models.service.js loaded');
+</pre></p>
