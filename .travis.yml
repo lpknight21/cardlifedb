@@ -10,4 +10,4 @@ before_script:
   - bower install
   - grunt build
 after_script:
-  - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-org
+  - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-org --public=dist
