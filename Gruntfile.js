@@ -398,6 +398,12 @@ module.exports = function (grunt) {
       deploy: {
         cmd: 'firebase deploy'
       },
+      deploy-org: {
+        cmd: 'firebase deploy --firebase "starterlog-org" --token ${FIREBASE_TOKEN}'
+      },
+      deploy-demo: {
+        cmd: 'firebase deploy --firebase "starterlog-demo" --token ${FIREBASE_TOKEN}'
+      },
       git_add: {
         cmd: 'git add .'
       },
@@ -477,10 +483,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'build',
-    'exec:deploy',
-    'exec:git_add',
-    'exec:git_commit',
-    "exec:git_push"
+    'exec:deploy-org',
+    'demo',
+    'exec:deploy-demo'
   ]);
 
   grunt.registerTask('default', [

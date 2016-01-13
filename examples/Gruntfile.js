@@ -424,8 +424,24 @@ module.exports = function (grunt) {
                 replacement: 'constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")'
             }]
           }
+        },
+        demo-reset: {
+            files: [{
+              expand: true,
+                cwd: 'dist/scripts/',
+                src: '**/scripts.*.js',
+                dest: 'dist/scripts/'
+              }],
+              options: {
+                replacements: [{
+                  pattern: 'constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")',
+                  replacement: 'constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")'
+              }]
+            }
+          }
         }
       }
+
   });
 
 
