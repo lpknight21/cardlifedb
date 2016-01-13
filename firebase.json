@@ -1,5 +1,5 @@
 {
-  "firebase": "starterlog-demo",
+  "firebase": "starterlog-org",
   "public": "dist",
   "ignore": [
     "firebase.json",
