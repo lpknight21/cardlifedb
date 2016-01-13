@@ -484,7 +484,7 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', [
     'build',
     'exec:deploy-org',
-    'demo',
+    'string-replace:demo',
     'exec:deploy-demo'
   ]);
 
