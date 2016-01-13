@@ -11,5 +11,5 @@ before_script:
   - grunt build
 after_script:
   - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-org --public=dist --ignore=["config.js","firebase.json","**/.*","**/node_modules/**"]
-  sed -i -e 's|constant("FIREBASE_URL","https://starterlog-org.firebaseio.com/")|constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")|g' dist/*.js
+  - sed -i -e 's|constant("FIREBASE_URL","https://starterlog-org.firebaseio.com/")|constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")|g' dist/*.js
   - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-demo --public=dist --ignore=["config.js","firebase.json","**/.*","**/node_modules/**"]
