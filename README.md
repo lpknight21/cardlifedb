@@ -10,10 +10,10 @@ StarterLog is a seed project that serves teams who are in the process of getting
 
 ### Core Components
 
-- Angular JS
-- Firebase
-- Bootstrap
-- Font Awesome
+- Angular JS (Super Hero Application Framework)
+- Firebase   (Real-Time Database)
+- Bootstrap  (CSS Framework)
+- Font Awesome (Icon Framework)
 - Node JS   (Server)
 - NPM       (Backend Dependencies)
 - Bower JS  (Frontend Dependencies)
