@@ -270,12 +270,12 @@ module.exports = function (grunt) {
        dist: {}
      },
 
-    imagemin: {
+    image: {
       dist: {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.png',
+          src: '{,*/}*.{png,jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/images'
         }]
       }
@@ -379,7 +379,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
-        'imagemin',
+        'image',
         'svgmin'
       ]
     },
