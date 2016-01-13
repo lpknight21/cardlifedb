@@ -195,8 +195,8 @@ var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', '
     //     }
     //   });
     $urlRouterProvider.otherwise('/');
-  }])
-.constant('FIREBASE_URL', 'https://starterlog-org.firebaseio.com/');
+  }]);
+//.constant('FIREBASE_URL', 'https://starterlog-org.firebaseio.com/');
 
 console.log('--> starterlog/app/app.js loaded');
 
