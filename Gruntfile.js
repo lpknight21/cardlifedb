@@ -407,7 +407,24 @@ module.exports = function (grunt) {
       git_push: {
         cmd: 'git push'
       }
-    }
+    },
+
+    'string-replace': {
+      demo: {
+          files: [{
+            expand: true,
+              cwd: 'dist/scripts/',
+              src: '**/scripts.*.js',
+              dest: 'dist/scripts/'
+            }],
+            options: {
+              replacements: [{
+                pattern: 'constant("FIREBASE_URL","https://starterlog-org.firebaseio.com/")',
+                replacement: 'constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")'
+            }]
+          }
+        }
+      }
 
   });
 
@@ -470,5 +487,9 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('demo', [
+    'string-replace:demo'
   ]);
 };
