@@ -14,7 +14,7 @@ StarterLog is a seed project that serves teams who are in the process of getting
 - Firebase
 - Bootstrap
 - Font Awesome
-- Node JS
+- Node JS   (Server)
 - NPM       (Backend Dependencies)
 - Bower JS  (Frontend Dependencies)
 - Grunt JS  (Task Runner)
