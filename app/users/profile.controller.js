@@ -18,4 +18,4 @@ app.controller('ProfileCtrl', function($state, Auth, auth, profile){
     };
   });
 
-console.log('--> starterlog/app/users.profile.js loaded');
+console.log('[ ProfileController ]--> starterlog/app/users.profile.js loaded');

@@ -14,7 +14,7 @@ app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObje
     $scope.create = function(post) {
       post.createdAt = new Date().toString();
       $scope.posts.$add(post).then(function() {
-        console.log('Blog Post Created');
+        console.log('[ PostsCtrl ] --> Blog Post Created');
 
         //$location.path('/posts');
         $state.go('blog-posts');
@@ -34,7 +34,7 @@ app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObje
     $scope.update = function() {
       // save firebaseObject
       $scope.post.$save().then(function(){
-        console.log('Blog Post Updated');
+        console.log('[ PostsCtrl ] --> Blog Post Updated');
 
         // redirect to /posts path after update
         $state.go('blog-posts');
@@ -46,7 +46,7 @@ app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObje
     // DELETE - REMOVE A POST FROM FIREBASE
     $scope.delete = function(post) {
         $scope.posts.$remove(post).then(function(){
-            console.log('Post Deleted');
+            console.log('[ PostsCtrl ] --> Post Deleted');
 
             // redirect to /posts path after delete
             $state.go('blog-posts');
@@ -91,4 +91,4 @@ app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObje
 
 });
 
-console.log('--> starterlog/app/blog/posts.controller.js loaded');
+console.log('[ PostsController ] --> starterlog/app/blog/posts.controller.js loaded');

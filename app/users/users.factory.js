@@ -30,4 +30,4 @@ app.factory('Users', function($firebaseArray, $firebaseObject, FIREBASE_URL){
 
     return Users;
   });
-  console.log('--> starterlog/app/users/users.service.js loaded');
+  console.log('[ UsersFactory ]--> starterlog/app/users/users.factory.js loaded');

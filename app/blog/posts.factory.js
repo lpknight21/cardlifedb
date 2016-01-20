@@ -9,4 +9,4 @@ app.factory("Posts", function PostFactory(FIREBASE_URL, $firebaseArray) {
   }
 });
 
-console.log('--> starterlog/app/blog/posts.service.js loaded');
+console.log('[ PostsFactory ]--> starterlog/app/blog/posts.factory.js loaded');

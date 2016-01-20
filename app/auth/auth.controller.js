@@ -24,4 +24,4 @@ app.controller('AuthCtrl', function(Auth, $state){
     };
 
   });
-  console.log('--> starterlog/app/auth/auth.controller.js loaded');
+  console.log('[ AuthController ]--> starterlog/app/auth/auth.controller.js loaded');

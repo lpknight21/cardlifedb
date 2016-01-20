@@ -160,17 +160,17 @@ var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', '
         url: '/pages/welcome',
         templateUrl: 'pages/welcome.html'
       })
-      .state('patterns-configuration', {
-        url: '/patterns/configuration',
-        templateUrl: 'patterns/configuration.html'
+      .state('docs-configuration', {
+        url: '/docs/configuration',
+        templateUrl: 'docs/configuration.html'
       })
-      .state('patterns-contoller', {
-        url: '/patterns/controller',
-        templateUrl: 'patterns/controller.html'
+      .state('docs-contoller', {
+        url: '/docs/controller',
+        templateUrl: 'docs/controller.html'
       })
-      .state('patterns-factory', {
-        url: '/patterns/factory',
-        templateUrl: 'patterns/factory.html'
+      .state('docs-factory', {
+        url: '/docs/factory',
+        templateUrl: 'docs/factory.html'
       })
       .state('get-started', {
         url: '/get-started',
@@ -198,4 +198,4 @@ var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', '
   })
 .constant('FIREBASE_URL', 'https://starterlog-org.firebaseio.com/');
 
-console.log('--> starterlog/app/app.js loaded');
+console.log('[ Core App Module ]--> starterlog/app/app.js loaded');

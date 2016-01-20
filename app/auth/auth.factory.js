@@ -5,4 +5,4 @@ app.factory('Auth', function($firebaseAuth, FIREBASE_URL){
 
     return auth;
   });
-console.log('--> starterlog/app/auth/auth.service.js loaded');  
+console.log('[ AuthFactory ]--> starterlog/app/auth/auth.factory.js loaded');  
