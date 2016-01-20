@@ -1,6 +1,7 @@
 {
   "firebase": "starterlog-org",
   "public": "dist",
+  "rules": "config/rules.json",
   "ignore": [
     "firebase.json",
     "**/.*",

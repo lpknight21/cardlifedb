@@ -1,0 +1,5 @@
+// Allow All Access (Not Safe For Production)
+path / {
+  read() { true }
+  write() { true }
+}
