@@ -1,0 +1,27 @@
+
+<form class="form-horizontal well" ng-submit="update()" ng-init="getTag()">
+  <fieldset>
+    <legend>Edit Tag</legend>
+        <br>
+        <hr>
+    <div class="form-group">
+      <label for="inputId" class="col-lg-2 control-label">Tag Id</label>
+      <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputId" placeholder="id" ng-model="tag.$id" readonly >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputName" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputName" placeholder="name" ng-model="tag.name" >
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <a href="#/tags" class="btn btn-sm btn-default"><i class="fa fa-times"> CANCEL</i></a>
+        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-floppy-o"> Update </i></button>
+      </div>
+    </div>
+  </fieldset>
+</form>

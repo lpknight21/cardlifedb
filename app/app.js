@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', 'ngTable', 'textAngular'])
+var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', 'ngTable','ngTagsInput','textAngular'])
   .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
       .state('login', {
@@ -91,6 +91,41 @@ var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', '
         templateUrl: 'blog/edit.html',
         controller: 'PostsCtrl as postsCtrl'
       })
+      // Tags
+      .state('tags', {
+        url: '/tags',
+        controller: 'TagsCtrl as tagsCtrl',
+        templateUrl: 'tags/index.html',
+        resolve: {
+          auth: function($state, Users, Auth){
+            return Auth.$requireAuth().catch(function(){
+              $state.go('home');
+            });
+          }
+        }
+      })
+      .state('tags/create', {
+        url: '/tags/create',
+        templateUrl: 'tags/create.html',
+        controller: 'TagsCtrl as tagsCtrl',
+        resolve: {
+          auth: function($state, Users, Auth){
+            return Auth.$requireAuth().catch(function(){
+              $state.go('home');
+            });
+          }
+        }
+      })
+      .state('tags/view', {
+        url: '/tags/view/{tagId}',
+        templateUrl: 'tags/view.html',
+        controller: 'TagsCtrl as tagsCtrl'
+      })
+      .state('tags/edit', {
+        url: '/tags/edit/{tagId}',
+        templateUrl: 'tags/edit.html',
+        controller: 'TagsCtrl as tagsCtrl'
+      })
       // Pages Content
       .state('pages-about', {
         url: '/pages/about',
@@ -180,22 +215,8 @@ var app = angular.module('starterlog', ['firebase','ui.bootstrap','ui.router', '
         url: '/',
         templateUrl: 'static/home.html'
       });
-    // $stateProvider
-    //   .state('home', {
-    //     url: '/home',
-    //     templateUrl: 'pages/home.html',
-    //     resolve: {
-    //       requireNoAuth: function($state, Auth){
-    //         return Auth.$requireAuth().then(function(auth){
-    //           $state.go('home');
-    //         }, function(error){
-    //           return;
-    //         });
-    //       }
-    //     }
-    //   });
-    $urlRouterProvider.otherwise('/');
-  })
+      $urlRouterProvider.otherwise('/');
+})
 .constant('FIREBASE_URL', 'https://starterlog-org.firebaseio.com/');
 
-console.log('[ Core App Module ]--> starterlog/app/app.js loaded');
+console.log('[ Core App Module ] --> starterlog/app/app.js loaded');

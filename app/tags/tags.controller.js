@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("TagsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObject, $firebaseArray, $stateParams, ngTableParams, $filter, Tags) {
+app.controller("TagsCtrl", function($state, $location, $scope, FIREBASE_URL, $firebaseObject, $firebaseArray, $stateParams, ngTableParams, $filter, Tags) {
 
     $scope.tags = Tags();
 
@@ -33,11 +33,12 @@ app.controller("TagsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObjec
     // UPDATE - EDIT A TAG AND SAVE IT TO FIREBASE
     $scope.update = function() {
       // save firebaseObject
-      $scope.tags.$save().then(function(){
+      $scope.tag.$save().then(function(){
         console.log('[ TagsCtrl ] --> Tag Updated');
 
         // redirect to /tags path after update
-        $state.go('tags');
+        //$state.go('tags/view');
+        $location.path('/tags/view/' + $scope.tag.$id);
       }).catch(function(error){
         console.log(error);
       });

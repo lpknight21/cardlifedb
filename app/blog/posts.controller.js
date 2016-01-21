@@ -1,8 +1,12 @@
 'use strict';
 
-app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObject, $firebaseArray, $stateParams, ngTableParams, $filter, Posts) {
+app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObject, $firebaseArray, $stateParams, ngTableParams, $filter, Posts, Tags) {
 
     $scope.posts = Posts();
+    $scope.tags = Tags();
+    $scope.loadTags = function() {
+            return Tags();
+          };
 
     // CORE CRUD FUNCTIONALITY
     // - CREATE ($add firebaseObject to synchronized firebaseArray)
@@ -55,6 +59,10 @@ app.controller("PostsCtrl", function($state, $scope, FIREBASE_URL, $firebaseObje
         });
     };
 
+    // LOAD TAGS
+    // $scope.loadTags = function() {
+    //   return Tags();
+    // };
 
     // DATA TABLE SYNCHRONIZATION USING NG-TABLE
 
