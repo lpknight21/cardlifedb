@@ -1,8 +1,8 @@
 {
-  "name": "StarterLog",
+  "name": "CardLifeDB",
   "version": "1.0.0",
   "authors": [
-    "Brian Hooper <AFellowHobbyist@gmail.com>"
+    "Louis Knight IV <lpknight21@gmail.com>"
   ],
   "description": "Angular + Firebase Seed Project Designed by Copyleft.io",
   "main": "app/index.html",
@@ -29,7 +29,7 @@
     "angular-mocks": "^1.4.3"
   },
   "appPath": "app",
-  "moduleName": "starterlog",
+  "moduleName": "cardlifedb",
   "resolutions": {
     "angular": "^1.4.3"
   }

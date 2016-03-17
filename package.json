@@ -1,10 +1,10 @@
 {
-  "name": "StarterLog",
+  "name": "CardLifeDB",
   "version": "1.0.0",
   "authors": [
-    "Brian Hooper <AFellowHobbyist@gmail.com>"
+    "Louis Knight IV <lpknight21@gmail.com>"
   ],
-  "description": "Angular + Firebase Seed Project Designed by Copyleft.io",
+  "description": "CardlifeDB is a deckbuilder and card search engine for any card game.",
   "dependencies": {},
   "repository": {},
   "devDependencies": {

@@ -425,8 +425,8 @@ module.exports = function (grunt) {
             }],
             options: {
               replacements: [{
-                pattern: 'constant("FIREBASE_URL","https://starterlog-org.firebaseio.com/")',
-                replacement: 'constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")'
+                pattern: 'constant("FIREBASE_URL","https://cardlifedb.firebaseio.com/")',
+                replacement: 'constant("FIREBASE_URL","https://cardlifedb.firebaseio.com/")'
             }]
           }
         }

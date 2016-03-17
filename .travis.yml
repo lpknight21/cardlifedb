@@ -15,6 +15,6 @@ before_script:
 
   # Deploy Demo Starterlog Application
   # Update FIREBASE_URL
-  # - sed -i -e 's|constant("FIREBASE_URL","https://starterlog-org.firebaseio.com/")|constant("FIREBASE_URL","https://starterlog-demo.firebaseio.com/")|g' dist/scripts/scripts.*.js
+  # - sed -i -e 's|constant("FIREBASE_URL","https://cardlifedb.firebaseio.com/")|constant("FIREBASE_URL","https://cardlifedb.firebaseio.com/")|g' dist/scripts/scripts.*.js
 #  - grunt demo
 #  - dpl --provider=firebase --token=${FIREBASE_TOKEN} --project=starterlog-demo --public=dist

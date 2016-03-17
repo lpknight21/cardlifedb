@@ -1,5 +1,5 @@
 {
-  "firebase": "starterlog-org",
+  "firebase": "cardlifedb",
   "public": "dist",
   "rules": "config/rules.json",
   "ignore": [
